@@ -1,0 +1,29 @@
+/* estilos generales */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 20px;
+    margin-top: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  /* pag especifico */
+  
+  .container {
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  .success {
+    color: green;
+  }
+  
