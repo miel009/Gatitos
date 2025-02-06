@@ -1,5 +1,6 @@
 <?php
-include_once("header.php");
+include_once("complementos/header.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -128,7 +129,7 @@ if($con){
 
 
 <?php
-include_once("footer.php");
+include_once("complementos/footer.php");
 ?>
 
 

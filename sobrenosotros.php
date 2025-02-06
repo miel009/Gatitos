@@ -1,5 +1,5 @@
 <?php
-include_once("header.php");
+include_once("complementos/header.php");
 ?>
     <main class="container-fluid ">
       <section class="hero">
@@ -22,5 +22,5 @@ include_once("header.php");
   
 
   <?php
-include_once("footer.php");
+include_once("complementos/footer.php");
 ?>

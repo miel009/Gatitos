@@ -1,19 +1,23 @@
 <?php
-include_once("header.php");
+include_once("../complementos/header.php");
+
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> </title>
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" type="text/css" href="style.php">
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
 
 
@@ -24,31 +28,23 @@ include_once("header.php");
 require_once("conect/conect.php");
 
 
-if($con){
-    print "<h1> Categorias </h1>";
+if ($con) {
+    print "<h1 id='h1-cat'> Categorias </h1>";
 
-    
 
     $consulta = "SELECT IdCategoria, categoria FROM categorias";
 
-    $resultado = mysqli_query($con,$consulta);
+    $resultado = mysqli_query($con, $consulta);
 
 
-    
-    
-    print "<ul>";
-    while($filas=mysqli_fetch_array($resultado)){
-        
-        print "<li><a href=adminProductos.php?categoria=$filas[IdCategoria] >$filas[categoria]</a></li>";
+    print " <div id='contenedor'> <ul>";
+    while ($filas = mysqli_fetch_array($resultado)) {
+
+        print "<li id='li-nav'><a href=adminProductos.php?categoria=$filas[IdCategoria] >$filas[categoria]</a></li>";
 
 
     }
-    print "</ul>";
-
-
-
-
-
+    print "</ul> </div> ";
 
 }
 
@@ -58,21 +54,24 @@ if($con){
 
 
 
-if($con){
+if ($con) {
 
-    print "<h1>Bienvenido al panel Administrador </h1>";
-    print "<h1> </h1>";
-    print "<p> Puede realizar :";
-    print "<p> Altas, Bajas y Modificaciones</p>";
-    
-    $consulta= "SELECT IdCategoria, categoria FROM categorias"; 
+    print "<div id='contenedor-gral'> 
+    <h1 id='h1-adm'> Bienvenido al panel Administrador </h1>
+    <p id='p-adm'> Puede realizar : Altas, Bajas y Modificaciones </p>
+    ";
 
-    $resultado= mysqli_query($con,$consulta);
 
-    if($resultado){
+    $consulta = "SELECT IdCategoria, categoria FROM categorias";
+
+    $resultado = mysqli_query($con, $consulta);
+
+    if ($resultado) {
 
         print "
-            <table border=1 >
+            
+            <table border=1>
+
             
                 <thead>
                     <tr>
@@ -87,10 +86,10 @@ if($con){
         
         
         
-        
+    
         ";
-        while($filas=mysqli_fetch_array($resultado)){
-        
+        while ($filas = mysqli_fetch_array($resultado)) {
+
             print "
             <tr> 
                 
@@ -103,36 +102,28 @@ if($con){
         
         ";
 
-    
+
         }
 
         print "
             </tbody>
-            </table>";
+            </table> </div> ";
 
     }
-
-
-
-
-
-
-
-
 }
 
 ?>
 
 
-<form action="alta.php"  method="get" >
+<form action="alta.php" method="get">
 
-    <div>
-        <label for="alta" >Nueva Categoria</label>
-        <input id="alta" name="alta" type="text" >
-        <input type="submit" value="Agregar categoria" >
+    <div id="contenedor-new">
+        <label for="alta" id='p-adm' >Nueva Categoria</label>
+        <input id="alta" name="alta" type="text">
+        <input type="submit" value="Agregar categoria">
     </div>
 
-    
+
 
 </form>
 

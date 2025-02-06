@@ -1,5 +1,5 @@
 <?php
-include_once("header.php");
+include_once("complementos/header.php");
 ?>
 
   <section class="featured">
@@ -36,5 +36,5 @@ include_once("header.php");
   </section>
 
   <?php
-include_once("footer.php");
+include_once("complementos/footer.php");
 ?>

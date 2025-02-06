@@ -1,5 +1,6 @@
 <?php
-include_once("header.php");
+include_once("complementos/header.php");
+
 ?>
 
   <section class="featured">
@@ -27,6 +28,6 @@ include_once("header.php");
     </div>
   </section>
 
-  <?php
-include_once("footer.php");
+<?php
+include_once("complementos/footer.php");
 ?>

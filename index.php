@@ -1,12 +1,12 @@
 <?php
-include_once("header.php");
+include_once("complementos/header.php");
 ?>
 
   <section class="hero">
     <div class="container">
       <h2>Bienvenido a nuestra empresa de gatos</h2>
       <p>Encuentra los gatos más adorables y tiernos para adoptar.</p>
-      <a href="#" class="cta">Ver gatos disponibles</a>
+      <a href="#" class="cta">Ver gatos disponibles </a>
     </div>
   </section>
 
