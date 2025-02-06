@@ -12,6 +12,7 @@ include_once("../complementos/header.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> </title>
     <link rel="stylesheet" type="text/css" href="style.php">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
 </head>
 
 <body>
@@ -25,7 +26,7 @@ include_once("../complementos/header.php");
 
 
 
-require_once("conect/conect.php");
+require_once("../conect/conect.php");
 
 
 if ($con) {
@@ -128,5 +129,5 @@ if ($con) {
 </form>
 
 <?php
-include_once("footer.php");
+include_once("../complementos/footer.php");
 ?>

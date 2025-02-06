@@ -42,5 +42,5 @@ include_once("complementos/header.php");
   </section>
 
   <?php
-include_once("footer.php");
+include_once("complementos/footer.php");
 ?>
