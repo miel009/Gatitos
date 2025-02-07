@@ -36,7 +36,7 @@ include_once("complementos/header.php");
         ?>
 
     </form>
-    <form action="complementos/alta.php" method="post" class="col-6" >
+    <form action="complementos/altareg.php" method="post" class="col-6" >
         <fieldset>
             <legend>Registrar</legend>
             <div>

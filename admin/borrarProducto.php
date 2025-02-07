@@ -1,5 +1,5 @@
 <?php
-include_once("complementos/header.php");
+include_once("../complementos/header.php");
 
 ?>
 
@@ -41,5 +41,5 @@ if($con){
 ?>
 
 <?php
-include_once("footer.php");
+include_once("../complementos/footer.php");
 ?>

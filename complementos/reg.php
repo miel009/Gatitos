@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("conexion.php");
+require_once("../conect/conect.php");
 if($con != NULL){
     if(isset($_POST['usuario']) and isset($_POST['pass']) ){
         $usuario = $_POST['usuario'];
@@ -15,7 +15,7 @@ if($con != NULL){
         $_SESSION = $fila;
 
         if($_SESSION['tipo'] == 'admin'){
-            header("Location: ../admin/index.php");
+            header("Location: ../admin/indexAdmin.php");
         }else{
             print "
             <ul>

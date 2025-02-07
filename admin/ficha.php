@@ -1,12 +1,12 @@
 
 <?php
-include_once("complementos/header.php");
+include_once("../complementos/header.php");
 
 ?>
 
 <?php
 
-require_once("conect/conect.php");
+require_once("../conect/conect.php");
 
 
 if($con){
@@ -48,5 +48,5 @@ if($con){
 
 
 <?php
-include_once("footer.php");
+include_once("../complementos/footer.php");
 ?>
