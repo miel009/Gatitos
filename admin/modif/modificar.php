@@ -1,11 +1,10 @@
 <?php
-include_once("../complementos/header.php");
-
+include_once("../../complementos/header.php");
 ?>
 
 <?php
 
-require_once("../conect/conect.php");
+require_once("../../componnents/config.php");
 
 if($con){
     if(isset($_GET['categoria'])){
@@ -38,7 +37,7 @@ if($con){
             </form>
         ";
 
-        print "<a href=indexAdmin.php >Volver</a>"; 
+        print "<a href=../indexAdmin.php >Volver</a>"; 
           
        
     }
@@ -47,5 +46,5 @@ if($con){
 ?>
 
 <?php
-include_once("../complementos/footer.php");
+include_once("../../complementos/footer.php");
 ?>

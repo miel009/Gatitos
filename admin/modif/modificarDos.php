@@ -1,12 +1,11 @@
 <?php
-include_once("../complementos/header.php");
+include_once("../../complementos/header.php");
 
 ?>
 
-
 <?php
 
-require_once("../conect/conect.php");
+require_once("../../componnents/config.php");
 
 if($con){
     if(isset($_GET['mod'])){
@@ -25,7 +24,7 @@ if($con){
 
     if($resultado){
         print "<h1>La categoria fue modificada por $mod</h1>";
-        print "<a href=indexAdmin.php >Volver</a>";      
+        print "<a href=../indexAdmin.php >Volver</a>";      
        
     }
 }
@@ -33,5 +32,5 @@ if($con){
 ?>
 
 <?php
-include_once("../complementos/footer.php");
+include_once("../../complementos/footer.php");
 ?>

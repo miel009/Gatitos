@@ -5,7 +5,7 @@ include_once("../complementos/header.php");
 
 <?php
 
-require_once("../conect/conect.php");
+require_once("../componnents/config.php");
 
 
 if($con){
@@ -39,8 +39,6 @@ if($con){
                 <tbody>
         
         
-        
-        
         ";
         while($filas=mysqli_fetch_array($resultado)){
         
@@ -65,16 +63,9 @@ if($con){
     }
 
 
-
-
-
-
-
-
 }
 
 ?>
-
 
 <form action="altaProductos.php"  method="post" enctype="multipart/form-data" >
     <div>

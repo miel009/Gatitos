@@ -1,11 +1,11 @@
 <?php
-include_once("../complementos/header.php");
+include_once("../../complementos/header.php");
 
 ?>
 
 <?php
 
-require_once("../conect/conect.php");
+require_once("../../componnents/config.php");
 
 if($con){
     if( isset($_POST['nombreProducto']) and isset($_POST['precioProducto']) and isset($_POST['categoriaProducto']) ){
@@ -22,7 +22,7 @@ if($con){
 
     if($resultado){
         print "<h1>El producto fue modificado por $nombre</h1>";
-        print "<a href=indexAdmin.php >Volver</a>";      
+        print "<a href=../indexAdmin.php >Volver</a>";      
        
     }
 }
@@ -30,5 +30,5 @@ if($con){
 ?>
 
 <?php
-include_once("../complementos/footer.php");
+include_once("../../complementos/footer.php");
 ?>

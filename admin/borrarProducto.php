@@ -18,7 +18,7 @@ include_once("../complementos/header.php");
 
 <?php
 
-require_once("conect/conect.php");
+require_once("componnents/config.php");
 
 if($con){
     if(isset($_GET['producto'])){

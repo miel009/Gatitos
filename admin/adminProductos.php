@@ -5,10 +5,7 @@ include_once("../complementos/header.php");
 
 <?php
 
-
-
-require_once("../conect/conect.php");
-
+require_once("../componnents/config.php");
 
 if($con){
     print "<h1>Producto</h1>";
@@ -33,14 +30,7 @@ if($con){
     }
     
 
-
-
-
-
-
 }
-
-
 
 
 ?>

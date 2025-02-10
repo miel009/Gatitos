@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("../conect/conect.php");
+require_once("../componnents/config.php");
 if($con != NULL){
     if(isset($_POST['usuario']) and isset($_POST['pass']) ){
         $usuario = $_POST['usuario'];

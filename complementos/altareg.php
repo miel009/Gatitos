@@ -1,5 +1,5 @@
 <?php
-require_once("../conect/conect.php");
+require_once("../componnents/config.php");
 
 if($con != NULL){
     if(isset($_POST['nombre']) and isset($_POST['mail']) and isset($_POST['pass1'])){

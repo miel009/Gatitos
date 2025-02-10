@@ -26,7 +26,7 @@ include_once("../complementos/header.php");
 
 
 
-require_once("../conect/conect.php");
+require_once("../componnents/config.php");
 
 
 if ($con) {
@@ -95,7 +95,7 @@ if ($con) {
             <tr> 
                 
                 <td><a href=productosAdmin.php?categoria=$filas[IdCategoria]>$filas[categoria]</a></td>
-                <td><a href=modificar.php?categoria=$filas[IdCategoria] >Modificar</a></td>
+                <td><a href=modif/modificar.php?categoria=$filas[IdCategoria] >Modificar</a></td>
                 <td><a href=borrar.php?categoria=$filas[IdCategoria] >Eliminar</a></td>
                 
 
@@ -116,7 +116,7 @@ if ($con) {
 ?>
 
 
-<form action="alta.php" method="get">
+<form action="alta/alta.php" method="get">
 
     <div id="contenedor-new">
         <label for="alta" id='p-adm' >Nueva Categoria</label>
