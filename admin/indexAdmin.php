@@ -23,11 +23,9 @@ include_once("../complementos/header.php");
 
 <?php
 
-
-
 require_once("../componnents/config.php");
 
-
+/* 
 if ($con) {
     print "<h1 id='h1-cat'> Categorias </h1>";
 
@@ -50,8 +48,10 @@ if ($con) {
     print "<h1> No se pudo conectar a la base de datos </h1>";
 }
 
-?>
 
+*/
+
+?>
 <?php
 
 

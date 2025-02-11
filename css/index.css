@@ -138,5 +138,8 @@ footer {
   padding: 1rem;
 }
 
-
+table{
+  display: flexbox;
+  width: 50%;
+}
 

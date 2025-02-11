@@ -15,12 +15,8 @@ padding: 10px;
 }
 
 #contenedor-gral{
-padding-top: 30px;
-padding-bottom: 20px;
-padding-left: 20px;
-padding-right:20px;
-display: grid;
-grid-template-columns: 1fr ;
+margin:auto;
+padding:auto;
 }
 
 #contenedor-new{
@@ -33,7 +29,7 @@ padding-right:20px;
 
 #h1-adm{
 font-size: 40px;
-margin-top: 0px;
+margin-top: 40px;
 text-align: left;
 }
 
@@ -74,18 +70,21 @@ color: #000;
 }
 
 table {
-border-collapse: collapse;
+margin 0 auto;
+margin-top:20px;
 width: 50%;
 }
 
 th, td {
+
 border: 1px solid #000;
-padding: 10px;
+padding: 10px 50px;
 font-size:20px;
 }
 
 tr:nth-child(even) {
 background-color: #f5f5f5;
+
 }
 
 form {
