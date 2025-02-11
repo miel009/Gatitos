@@ -37,9 +37,6 @@ $menu['Ingresar']= '../registro.php';
 
 print "<ol class='navbar-nav me-auto mb-2 mb-lg-0'>";
 foreach($menu as $nombres=>$links){
- 
-
-  
 
     print "<li><a href=$links >$nombres</a></li>";
     

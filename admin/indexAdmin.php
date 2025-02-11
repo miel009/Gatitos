@@ -3,7 +3,6 @@ include_once("../complementos/header.php");
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +11,7 @@ include_once("../complementos/header.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> </title>
     <link rel="stylesheet" type="text/css" href="style.php">
-    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../../css/index.css">
 </head>
 
 <body>
@@ -34,10 +33,10 @@ if ($con) {
 
 
     $consulta = "SELECT IdCategoria, categoria FROM categorias";
-
+    //guardamos el resuldado en la query
     $resultado = mysqli_query($con, $consulta);
 
-
+    //filtramo arrays -->categoria 
     print " <div id='contenedor'> <ul>";
     while ($filas = mysqli_fetch_array($resultado)) {
 
@@ -47,6 +46,8 @@ if ($con) {
     }
     print "</ul> </div> ";
 
+} else{
+    print "<h1> No se pudo conectar a la base de datos </h1>";
 }
 
 ?>
@@ -96,7 +97,7 @@ if ($con) {
                 
                 <td><a href=productosAdmin.php?categoria=$filas[IdCategoria]>$filas[categoria]</a></td>
                 <td><a href=modif/modificar.php?categoria=$filas[IdCategoria] >Modificar</a></td>
-                <td><a href=borrar.php?categoria=$filas[IdCategoria] >Eliminar</a></td>
+                <td><a href=baja/borrar.php?categoria=$filas[IdCategoria] >Eliminar</a></td>
                 
 
             </tr>

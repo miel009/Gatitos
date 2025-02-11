@@ -6,27 +6,28 @@ form-container {
     border-radius: 5px;
 }
 
+label {
+    font-weight: bold; 
+}
 
-.form-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+.modif-form {
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 
-.form-input {
-    width: 100%;
+input {
+    width: 10%;
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #846969;
     border-radius: 3px;
 }
 
-
-.submit-button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+a {
+    text-decoration: none;
+    color: #251a1a;
+    margin: 0 auto;
+    padding: 20px;
 }
