@@ -1,0 +1,37 @@
+
+/* espaciado de largo en toda la seccion */
+
+
+section{
+ height: 100% ; 
+ background-image: url('/img/newimg.webp'); 
+ background-size: cover; /* hace que la imagen ocupe todo*/ 
+ background-position: center; /* Centra */
+ background-repeat: no-repeat; /* evita que repita */
+ /* filter: blur(5px); desenfoque  */
+}
+
+.container{
+    width: 400px;
+    height: 400px;
+    margin-top: 40px;
+    padding-right: 20px;
+    
+}
+.container1{
+    width: 400px;
+    height: 400px;
+    margin-top: 100px;
+    padding-right: 20px;
+}
+
+label, input, div {
+    padding-bottom: 5px;
+}
+
+h2{
+    color:#d3b7b7;
+    text-align:center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* sombra en el texto */
+    
+}

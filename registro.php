@@ -15,10 +15,17 @@ include_once("complementos/header.php");
     
 
 <section class="row" >
-<form action="complementos/reg.php" method="post" class="col-6" >
+    
+    <div class="container">
+    <h2>Unite a la comunidad gatuna mas linda</h2>
+    </div>
+    
+    <div class="container1"> 
+    <form action="complementos/reg.php" method="post" class="col-6" >
+       
         <fieldset>
             <legend>Ingresar</legend>
-            <div>
+            <div> 
                 <label for="usuario" >Usuario/mail</label>
                 <input id="usuario" name="usuario" type="email"  >
             </div>
@@ -26,8 +33,10 @@ include_once("complementos/header.php");
                 <label for="pass" >Contraseña</label>
                 <input id="pass" name="pass" type="password"  >
             </div>
-            <input type="submit" value="Ingesar" >
+            <input type="submit" value="Ingresar" >
         </fieldset>
+        </form>
+    </div>
         <?php
             if(isset($_GET['alta'])){
                 print "<strong style=color:green >Ya te podes loguear</strong>";
@@ -35,7 +44,8 @@ include_once("complementos/header.php");
         
         ?>
 
-    </form>
+    
+    <div class="container1">
     <form action="complementos/altareg.php" method="post" class="col-6" >
         <fieldset>
             <legend>Registrar</legend>
@@ -55,6 +65,7 @@ include_once("complementos/header.php");
         </fieldset>
 
     </form>
+    </div>
 </section>
   
 
@@ -65,14 +76,3 @@ include_once("complementos/header.php");
 </html>
 
 
-
-
-
-
-
-
-
-
-<?php
-include_once("complementos/footer.php");
-?>
