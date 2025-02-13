@@ -1,8 +1,8 @@
 *{
  margin: 0px;
  padding: 0px; 
- 
 }
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 h1{
   text-align: center ;
@@ -16,8 +16,10 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: 'Kablammo', cursive;
-  font-family: 'Mooli', sans-serif;
+  
+}
+section{
+  font-family: "Oswald", serif;
 }
 
 .container {
@@ -34,6 +36,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: "Oswald", serif;
 }
 
 nav {
@@ -136,6 +139,7 @@ footer {
   color: #fff;
   text-align: center;
   padding: 1rem;
+  font-family: "Oswald", serif;
 }
 
 table{

@@ -12,7 +12,7 @@ include_once("complementos/header.php");
 
   <section class="featured">
     <div class="container">
-      <h3>Nuestros gatos destacados</h3>
+      <h1>Nuestros gatos destacados</h1>
       <div class="row">
         <div class="col-md-4">
           <div class="card">

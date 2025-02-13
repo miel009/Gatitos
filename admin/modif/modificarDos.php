@@ -13,6 +13,9 @@ include_once("../../complementos/header.php");
     <link rel="stylesheet" type="text/css" href="../css/style.php">
     <link rel="stylesheet" type="text/css" href="../../css/index.css">
     <link rel="stylesheet" type="text/css" href="../../css/modificar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -25,25 +28,25 @@ include_once("../../complementos/header.php");
 
 require_once("../../componnents/config.php");
 
-if($con){
-    if(isset($_GET['mod'])){
+if ($con) {
+    if (isset($_GET['mod'])) {
 
-        $mod=$_GET['mod'];
+        $mod = $_GET['mod'];
     }
-    if(isset($_GET['id'])){
+    if (isset($_GET['id'])) {
 
-        $id=$_GET['id'];
+        $id = $_GET['id'];
 
     }
-    
-    $consulta= "UPDATE categorias SET categoria='$mod' WHERE IdCategoria='$id' "; 
 
-    $resultado= mysqli_query($con,$consulta);
+    $consulta = "UPDATE categorias SET categoria='$mod' WHERE IdCategoria='$id' ";
 
-    if($resultado){
+    $resultado = mysqli_query($con, $consulta);
+
+    if ($resultado) {
         print "<h1>La categoria fue modificada por $mod</h1>";
-        print "<a href=../indexAdmin.php >Volver</a>";      
-       
+        print "<a href=../indexAdmin.php >Volver</a>";
+
     }
 }
 

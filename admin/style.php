@@ -4,7 +4,7 @@ header("Content-Type: text/css; charset: UTF-8");
 ?>
 
 body {
-font-family: sans-serif;
+font-family: "Oswald", serif;
 font-size: 16px;
 background-color: #fff;
 }

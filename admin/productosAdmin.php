@@ -12,6 +12,9 @@ include_once("../complementos/header.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> </title>
     <link rel="stylesheet" type="text/css" href="../../css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -27,21 +30,21 @@ include_once("../complementos/header.php");
 require_once("../componnents/config.php");
 
 
-if($con){
-    if(isset($_GET['categoria'])){
-        $id=$_GET['categoria'];
+if ($con) {
+    if (isset($_GET['categoria'])) {
+        $id = $_GET['categoria'];
 
     }
 
     print "<h1> Bienvenido - PRODUCTOS</h1>";
     print "<h2> </h2>";
     print "<p>Altas, Bajas y Modificaciones</p>";
-    
-    $consulta= "SELECT codigoProducto, nombreProducto FROM productos WHERE categoriaProducto='$id'"; 
 
-    $resultado= mysqli_query($con,$consulta);
+    $consulta = "SELECT codigoProducto, nombreProducto FROM productos WHERE categoriaProducto='$id'";
 
-    if($resultado){
+    $resultado = mysqli_query($con, $consulta);
+
+    if ($resultado) {
 
         print "
             <table border=1 >
@@ -59,8 +62,8 @@ if($con){
         
         
         ";
-        while($filas=mysqli_fetch_array($resultado)){
-        
+        while ($filas = mysqli_fetch_array($resultado)) {
+
             print "
                 <tr>
                     <td>$filas[nombreProducto]</td>
@@ -71,8 +74,8 @@ if($con){
                 </tr>
             
             ";
-    
-    
+
+
         }
 
         print "
@@ -86,7 +89,7 @@ if($con){
 
 ?>
 
-<form action="alta/alta.php"  method="post" enctype="multipart/form-data" >
+<form action="alta/alta.php" method="post" enctype="multipart/form-data">
     <div>
         <label for="codigoProducto">Codigo del Producto</label>
         <input Id="codigoProducto" type="number" name="codigoProducto" require />
@@ -99,18 +102,18 @@ if($con){
         <label for="precioProducto">Precio Producto</label>
         <input Id="precioProducto" type="number" name="precioProducto" require />
     </div>
-    
+
     <div>
-        <label for="archivo" > Cargar Imagen </label>
+        <label for="archivo"> Cargar Imagen </label>
         <input Id="archivo" type="file" name="archivo" require />
     </div>
 
-  
+
     <div>
 
         <?php
 
-            print "<input type=hidden name=categoriaProducto value=$id >";
+        print "<input type=hidden name=categoriaProducto value=$id >";
         ?>
 
     </div>
@@ -126,5 +129,3 @@ if($con){
 <?php
 include_once("../complementos/footer.php");
 ?>
-
-

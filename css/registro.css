@@ -1,6 +1,5 @@
 
-/* espaciado de largo en toda la seccion */
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 section{
  height: 100% ; 
@@ -9,6 +8,7 @@ section{
  background-position: center; /* Centra */
  background-repeat: no-repeat; /* evita que repita */
  /* filter: blur(5px); desenfoque  */
+ font-family: "Oswald", serif;
 }
 
 .container{
@@ -33,5 +33,4 @@ h2{
     color:#d3b7b7;
     text-align:center;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* sombra en el texto */
-    
 }

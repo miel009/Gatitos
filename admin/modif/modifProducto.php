@@ -13,7 +13,9 @@ include_once("../../complementos/header.php");
     <link rel="stylesheet" type="text/css" href="../css/style.php">
     <link rel="stylesheet" type="text/css" href="../../css/index.css">
     <link rel="stylesheet" type="text/css" href="../../css/modificar.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -26,20 +28,20 @@ include_once("../../complementos/header.php");
 
 require_once("../../componnents/config.php");
 
-if($con){
-    if(isset($_GET['producto'])){
+if ($con) {
+    if (isset($_GET['producto'])) {
 
-        $id=$_GET['producto'];
+        $id = $_GET['producto'];
 
     }
-    
-    $consulta= "SELECT * FROM productos WHERE codigoProducto='$id'"; 
 
-    $resultado= mysqli_query($con,$consulta);
+    $consulta = "SELECT * FROM productos WHERE codigoProducto='$id'";
 
-    if($resultado){
+    $resultado = mysqli_query($con, $consulta);
 
-        $filas=mysqli_fetch_array($resultado);
+    if ($resultado) {
+
+        $filas = mysqli_fetch_array($resultado);
         print "
             <form action=modifProducto2.php method=post enctype=multipart/from-data>
             <div>
@@ -72,8 +74,8 @@ if($con){
 
             </form>
         ";
-          
-       
+
+
     }
 }
 
