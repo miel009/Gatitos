@@ -32,7 +32,16 @@ input{
     padding-bottom: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Sombra */
     margin-bottom: 5px;
+    border: 1px solid #ccc; /* más suave */
+    border-radius: 5px; 
 }
+
+button{
+    border: 0.5px solid #ccc; /* más suave */
+    border-radius: 5px; 
+    background: transparent;
+}
+
 
 h1{
     margin-top: 30px;
