@@ -11,26 +11,32 @@ section{
  font-family: "Oswald", serif;
 }
 
-.container{
-    width: 400px;
-    height: 400px;
-    margin-top: 40px;
-    padding-right: 20px;
-    
-}
-.container1{
-    width: 400px;
-    height: 400px;
-    margin-top: 100px;
-    padding-right: 20px;
+.container1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* corrige grid */
+    gap: 80px; /* Espacio entre  form */
+    justify-content: center;
+    padding: 20px; 
+    max-width: 100%; 
+    margin-left: 40px;
+    font-size: 18px;
 }
 
-label, input, div {
-    padding-bottom: 5px;
+form {
+    padding: 30px;
+    width: 30%;
+    min-width: 900px; 
 }
 
-h2{
+input{
+    padding-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    margin-bottom: 5px;
+}
+
+h1{
+    margin-top: 30px;
     color:#d3b7b7;
     text-align:center;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* sombra en el texto */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* sombra  */
 }

@@ -21,6 +21,6 @@ include_once("complementos/header.php");
     </main>
   
 
-  <?php
+<?php
 include_once("complementos/footer.php");
 ?>
