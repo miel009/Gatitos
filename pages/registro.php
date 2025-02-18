@@ -1,5 +1,5 @@
 <?php
-include_once("complementos/header.php");
+
 
 ?>
 
@@ -9,19 +9,28 @@ include_once("complementos/header.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> </title>
-    <link rel="stylesheet" href="css/registro.css">
-</head>
+    <link rel="stylesheet" href="../css/registro.css">
+    
 <body>
     
-
 <section>
     
     <h1>Unite a la comunidad gatuna mas linda</h1>
+
+    <?php
+
+    if(isset($_GET['error_uno'])){
+        print "<strong style=color:red > Todos los campos son obligatorios!! </strong>";
+    } 
+    if(isset($_GET['error_dos'])){
+        print "<strong style=color:red >Las contraseñas no coinciden.. </strong>";
+    }  
+    ?>
     
     <div class="container1"> 
-    <form action="complementos/altareg.php" method="post" class="col-6" >
+    <form action="../componnents/security/altareg.php" method="post" class="col-6" >
         <fieldset>
-            <legend>Registrar</legend>
+            <legend>Registrarse</legend>
             <div>
                 <label for="nombre" >Nombre:</label>
                 <input id="nombre" name="nombre" type="text"  >
@@ -49,7 +58,13 @@ include_once("complementos/header.php");
 
     </form>
 
-    <form action="complementos/reg.php" method="post" class="col-6" >
+        <?php
+        if(isset($_GET['log'])){
+            print "<strong style=color:red >El usuario no esta registrado </strong>";
+        }
+
+        ?>
+    <form action="../componnents/security/reg.php" method="post" class="col-6" >
        
         <fieldset>
             <legend>Ingresar</legend>
@@ -90,5 +105,4 @@ function mostrarOcultar(id) {
     }, 5000);
 }
 </script>
-
 
