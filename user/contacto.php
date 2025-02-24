@@ -1,5 +1,5 @@
 <?php
-include_once("complementos/header.php");
+include_once("../complementos/header.php");
 
 ?>
 
@@ -11,7 +11,7 @@ include_once("complementos/header.php");
         <div class="row">
           <div class="col-md-6">
             
-     <form action="datos.php" method="post" enctype="multipart/form-data">
+     <form action="../datos.php" method="post" enctype="multipart/form-data">
               <div class="form-group">
                 <label for="name" style="margin-top: 10px;margin-bottom:10px">Nombre:</label>
                 <input id="name" name="name" type="text" class="form-control" placeholder="Ingrese su nombre">
@@ -46,5 +46,5 @@ include_once("complementos/header.php");
   </main>
 
   <?php
-include_once("complementos/footer.php");
+include_once("../complementos/footer.php");
 ?>

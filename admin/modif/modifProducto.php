@@ -1,6 +1,8 @@
 <?php
+include_once("../../componnents/security/admin.php");
 include_once("../../complementos/header.php");
 
+//aca vienen las modficaciones del producto en particular
 ?>
 
 <!DOCTYPE html>
@@ -29,17 +31,18 @@ include_once("../../complementos/header.php");
 require_once("../../componnents/config.php");
 
 if ($con) {
-    if (isset($_GET['producto'])) {
+    if (isset($_GET['producto']) && is_numeric($_GET['producto']) ) {
 
-        $id = $_GET['producto'];
+        $id = (int)$_GET['producto']; // Convertir a entero
 
-    }
-
-    $consulta = "SELECT * FROM productos WHERE codigoProducto='$id'";
+    
+    
+    $consulta = "SELECT * FROM productos WHERE codigoProducto = $id ";
+    
 
     $resultado = mysqli_query($con, $consulta);
 
-    if ($resultado) {
+    if ($resultado && mysqli_num_rows($resultado) > 0) {
 
         $filas = mysqli_fetch_array($resultado);
         print "
@@ -58,25 +61,19 @@ if ($con) {
                 <input value=$filas[precioProducto] id=precioProducto type=numbe name=precioProducto require />
             </div>
             
-            
-        
-            <div>
-        
-            
-        
-                <input type=hidden name=categoriaProducto value=$filas[categoriaProducto] >
-            
-        
-            </div>
-        
             <input type=submit value='Modificar Producto' />
 
 
             </form>
         ";
-
-
+    } else {
+        echo "<p style='color: red;'>❌ No se encontró el producto con código: $id</p>";
     }
+} else {
+    echo "<p style='color: red;'>❌ Parámetro 'producto' inválido en la URL.</p>";
+}
+} else {
+echo "<p style='color: red;'>❌ No se pudo conectar a la base de datos.</p>";
 }
 
 ?>

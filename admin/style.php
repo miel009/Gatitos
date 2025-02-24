@@ -89,7 +89,7 @@ background-color: #f5f5f5;
 
 form {
 margin: 0 auto;
-width: 400px;
+width: 300px;
 }
 
 label {

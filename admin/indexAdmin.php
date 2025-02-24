@@ -1,4 +1,5 @@
 <?php
+include_once("../componnents/security/admin.php");
 include_once("../complementos/header.php");
 
 ?>
@@ -25,34 +26,12 @@ include_once("../complementos/header.php");
 
 require_once("../componnents/config.php");
 
-/* 
-if ($con) {
-    print "<h1 id='h1-cat'> Categorias </h1>";
-
-
-    $consulta = "SELECT IdCategoria, categoria FROM categorias";
-    //guardamos el resuldado en la query
-    $resultado = mysqli_query($con, $consulta);
-
-    //filtramo arrays -->categoria 
-    print " <div id='contenedor'> <ul>";
-    while ($filas = mysqli_fetch_array($resultado)) {
-
-        print "<li id='li-nav'><a href=adminProductos.php?categoria=$filas[IdCategoria] >$filas[categoria]</a></li>";
-
-
-    }
-    print "</ul> </div> ";
-
-} else{
-    print "<h1> No se pudo conectar a la base de datos </h1>";
-}
-
-
-*/
 
 ?>
+
 <?php
+
+
 
 
 
@@ -64,7 +43,7 @@ if ($con) {
     ";
 
 
-    $consulta = "SELECT IdCategoria, categoria FROM categorias";
+    $consulta = "SELECT codigoProducto, nombreProducto FROM productos";
 
     $resultado = mysqli_query($con, $consulta);
 
@@ -77,7 +56,7 @@ if ($con) {
             
                 <thead>
                     <tr>
-                        <th>Categoria</th>
+                        <th>Productos</th>
                         <th>Modificar</th>
                         <th>Eliminar</th>
                     
@@ -95,9 +74,9 @@ if ($con) {
             print "
             <tr> 
                 
-                <td><a href=productosAdmin.php?categoria=$filas[IdCategoria]>$filas[categoria]</a></td>
-                <td><a href=modif/modificar.php?categoria=$filas[IdCategoria] >Modificar</a></td>
-                <td><a href=baja/borrar.php?categoria=$filas[IdCategoria] >Eliminar</a></td>
+                <td><a href=ficha.php?producto=$filas[codigoProducto]>$filas[nombreProducto]</a></td>
+                <td><a href=modif/modifProducto.php?producto=$filas[codigoProducto] >Modificar</a></td>
+                <td><a href=baja/borrarProducto.php?producto=$filas[codigoProducto] >Eliminar</a></td>
                 
 
             </tr>
@@ -117,14 +96,29 @@ if ($con) {
 ?>
 
 
-<form action="alta/alta.php" method="get">
 
-    <div id="contenedor-new">
-        <label for="alta" id='p-adm' >Nueva Categoria</label>
-        <input id="alta" name="alta" type="text">
-        <input type="submit" value="Agregar categoria">
+<form action="alta/alta.php" method="post" enctype="multipart/form-data">
+    <div>
+        <label for="codigoProducto">Codigo del Producto</label>
+        <input id="codigoProducto" type="number" name="codigoProducto" required />
+    </div>
+    <div>
+        <label for="nombreProducto">Nombre Producto</label>
+        <input id="nombreProducto" type="text" name="nombreProducto" required />
+    </div>
+    <div>
+        <label for="precioProducto">Precio Producto</label>
+        <input id="precioProducto" type="number" name="precioProducto" required />
     </div>
 
+    <div>
+        <label for="archivo"> Cargar Imagen </label>
+        <input Id="archivo" type="file" name="archivo" require />
+    </div>
+    
+   
+
+    <input type="submit" value="Cargar Producto" />
 
 
 </form>

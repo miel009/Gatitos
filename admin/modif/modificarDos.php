@@ -1,4 +1,5 @@
 <?php
+include_once("../../componnents/security/admin.php");
 include_once("../../complementos/header.php");
 
 ?>

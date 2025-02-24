@@ -1,4 +1,5 @@
 <?php
+include_once("../../componnents/security/admin.php");
 include_once("../../complementos/header.php");
 
 ?>
@@ -31,7 +32,7 @@ include_once("../../complementos/header.php");
 require_once("../../componnents/config.php");
 
 if ($con) {
-    if (isset($_POST['nombreProducto']) and isset($_POST['precioProducto']) and isset($_POST['categoriaProducto'])) {
+    if (isset($_POST['nombreProducto']) and isset($_POST['precioProducto']) and isset($_POST['codigoProducto'])) {
 
         $codigo = $_POST['codigoProducto'];
         $nombre = $_POST['nombreProducto'];

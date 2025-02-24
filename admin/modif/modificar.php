@@ -1,4 +1,5 @@
 <?php
+include_once("../../componnents/security/admin.php");
 include_once("../../complementos/header.php");
 ?>
 
@@ -29,13 +30,13 @@ include_once("../../complementos/header.php");
 require_once("../../componnents/config.php");
 
 if($con){
-    if(isset($_GET['categoria'])){
+    if(isset($_GET['nombreProducto'])){
 
-        $id=$_GET['categoria'];
+        $id=$_GET['nombreProducto'];
 
     }
     
-    $consulta= "SELECT IdCategoria, categoria FROM categorias WHERE IdCategoria='$id'"; 
+    $consulta= "SELECT codigoProducto, nombreProducto FROM productos"; 
 
     $resultado= mysqli_query($con,$consulta);
 
@@ -46,9 +47,9 @@ if($con){
             <form action=modificarDos.php metodh=get>
                 <div class='modif-form'>
                     <label for=mod >Modificar</label>
-                    <input id=mod name=mod type=text value=$filas[categoria]>
+                    <input id=mod name=mod type=text value=$filas[nombreProducto]>
 
-                    <input name=id type=hidden value=$filas[IdCategoria] />
+                    <input name=id type=hidden value=$filas[codigoProducto] />
 
                     <input type=submit value=Modificar />
 

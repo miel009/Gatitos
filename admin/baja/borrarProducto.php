@@ -1,5 +1,6 @@
 <?php
-include_once("../complementos/header.php");
+include_once("../../componnents/security/admin.php");
+include_once("../../complementos/header.php");
 
 ?>
 
@@ -19,17 +20,16 @@ include_once("../complementos/header.php");
 
 <?php
 
-require_once("componnents/config.php");
+require_once("../../componnents/config.php");
 
 if($con){
-    if(isset($_GET['producto'])){
+    if(isset($_GET['producto']) && is_numeric($_GET['producto'])){
 
-        $id=$_GET['producto'];
+        $id = (int)$_GET['producto'];
 
     }
     
-    $consulta= "DELETE FROM productos WHERE codigoProducto='$id'"; 
-
+    $consulta= "DELETE FROM productos WHERE codigoProducto=$id"; 
     $resultado= mysqli_query($con,$consulta);
 
     if($resultado){
@@ -42,5 +42,5 @@ if($con){
 ?>
 
 <?php
-include_once("../complementos/footer.php");
+include_once("../../complementos/footer.php");
 ?>

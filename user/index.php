@@ -1,7 +1,17 @@
 <?php
-include_once("complementos/header.php");
+session_start();
+include_once("../complementos/header.php");
 ?>
 
+<?php
+
+
+if(!isset($_SESSION['id_usuario'] )){
+    header("Location: index.php"); // index de la carpeta user
+
+}
+
+?>
   <section class="hero">
     <div class="container">
       <h2>Bienvenido a nuestra empresa de gatos</h2>
@@ -16,7 +26,7 @@ include_once("complementos/header.php");
       <div class="row">
         <div class="col-md-4">
           <div class="card">
-            <img src="img/garfiels.jpg" alt="Garfiels">
+            <img src="../img/garfiels.jpg" alt="Garfiels">
             <h4>Garfield</h4>
             
 
@@ -25,14 +35,14 @@ include_once("complementos/header.php");
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img src="img/gato2.jpg" alt="Pandi">
+            <img src="../img/gato2.jpg" alt="Pandi">
             <h4>Pandi</h4>
             <p>Les presentamos a Pandi tiene casi 1 año. Es mimoso, juguetón y bastante celoso, se recomienda que sea hijo único. A pesar de esto, siempre va esperar tu llegada para darte la bienvenida con mucho amor, y además aprende trucos muy rápido. Por otro lado, tiene sus vacunas al día, lo cual no será un inconveniente.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img src="img/tigre.jpg" alt="Abril">
+            <img src="../img/tigre.jpg" alt="Abril">
             <h4>Abril</h4>
             <p> Les presentamos a Abril, es una gatita 7 meses. Es muy tranquila, educada,  cariñosa, le gusta jugar con su juguete preferido, y aunque tuvo un accidente y su patita quedó algo afectada, puede caminar y jugar sin problemas. También cabe destacar que tiene sus vacunas al día. </p>
           </div>
@@ -42,5 +52,5 @@ include_once("complementos/header.php");
   </section>
 
   <?php
-include_once("complementos/footer.php");
+include_once("../complementos/footer.php");
 ?>

@@ -28,13 +28,13 @@
 
 $menu = array();
 //$nombres            $links
-$menu['Inicio'] = '../index.php';
-$menu['Sobre nosotros'] = '../sobrenosotros.php';
-$menu['Productos'] = '../productos.php';
-$menu['Servicios'] = '../servicios.php';
-$menu['Contacto'] = '../contacto.php';
-$menu['Administrador'] = '/../admin/indexAdmin.php';
-$menu['Ingresar']= '../pages/registro.php';
+$menu['Inicio'] = '../user/index.php';
+$menu['Sobre nosotros'] = '../user/sobrenosotros.php';
+$menu['Productos'] = '../user/productos.php';
+$menu['Servicios'] = '../user/servicios.php';
+$menu['Contacto'] = '../user/contacto.php';
+//$menu['Administrador'] = '/../admin/indexAdmin.php';
+$menu['Salir']= '../user/logout.php';
 
 print "<ol class='navbar-nav me-auto mb-2 mb-lg-0'>";
 foreach($menu as $nombres=>$links){
