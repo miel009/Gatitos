@@ -14,10 +14,9 @@
 
 <body>
 
-    <section>
+    <section class="hero">
 
         <h1>Unite a la comunidad gatuna mas linda</h1>
-        <!-- <p>Registrate y disfruta de los beneficios de ser parte de la comunidad gatuna mas linda</p> -->
         <div class="container1">
             <form action="../componnents/security/altareg.php" method="post" class="col-6">
                 <fieldset>
@@ -25,7 +24,7 @@
                     <?php
                     //mensajes de error
                     if (isset($_GET['error_uno'])) {
-                        print "<p class='mensaje' style=color:red >Todos loos campos son obligatorios!!!</p>";
+                        print "<p class='mensaje' style=color:red >Todos los campos son obligatorios!!!</p>";
 
                     }
                     if (isset($_GET['error_dos'])) {
@@ -86,13 +85,13 @@
                 <fieldset>
                     <legend>Ingresar</legend>
                     <?php
-                    if (isset($_GET['log'])) {
+                    if (isset($_POST['log'])) {
                         print "<p class='mensaje' style=color:red >El usuario no esta registrado </p>";
                     }
-                    if (isset($_GET['bann'])) {
+                    if (isset($_POST['bann'])) {
                         print "<p class='mensaje' style=color:red >El usuario esta banneado, contacta al Administrador </p>";
                     }
-                    if (isset($_GET['pass'])) {
+                    if (isset($_POST['pass'])) {
                         print "<p  class='mensaje' style=color:red > La contraseña es incorrecta </p>";
                     }
 

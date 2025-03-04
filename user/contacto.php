@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once("../complementos/header.php");
 
 ?>
@@ -6,6 +7,7 @@ include_once("../complementos/header.php");
 
   <main>
     <section class="featured">
+
       <div class="container">
         <h1>Contacto</h1>
         <div class="row">
@@ -29,7 +31,7 @@ include_once("../complementos/header.php");
                 <textarea id="message" name="message" type="text" class="form-control"  rows="5" placeholder="Ingrese su mensaje"></textarea>
               </div>
             <div>
-                <button  type="submit"  style="margin-top: 20px ">Enviar datos</button>
+                <button id="admiInput" type="submit"  style="margin-top: 20px ">Enviar datos</button>
             </div>
               
       </form>

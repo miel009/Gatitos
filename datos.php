@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once("complementos/header.php");
 
 ?>
@@ -20,16 +21,16 @@ include_once("complementos/header.php");
     print "<ul>";
     if (isset($_POST["name"])) {
         $name= $_POST["name"];
-        print "<li>Name: $name</li>";
+        print "<li stylr= 'color: red' >Nombre: $name</li>";
     }
 
     if (isset($_POST["email"])) {
         $email= $_POST["email"];
-        print "<li>email: $email</li>";
+        print "<li>Correo: $email</li>";
     }
     if (isset($_POST["message"])) {
         $message= $_POST["message"];
-        print "<li>message: $message </li>";
+        print "<li> Mensaje: $message </li>";
     }
 
     print "</ul>";

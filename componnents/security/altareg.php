@@ -8,7 +8,7 @@ if($con != NULL){
     $clave_uno;
     $clave_dos;
 
-    if(isset($_POST['nombre']) and isset($_POST['apellido']) and isset($_POST['email']) and isset($_POST['clave']) and isset($_POST['clave_dos'])  ){
+    if(!empty($_POST['nombre']) && !empty($_POST['apellido']) && !empty($_POST['email']) && !empty($_POST['clave']) && !empty($_POST['clave_dos'])){
 
         //sacamos una posible falla de seguridad
          $nombre = mysqli_real_escape_string($con, $_POST['nombre']);

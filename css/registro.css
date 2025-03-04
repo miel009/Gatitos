@@ -2,47 +2,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 body {
-    height: 50px;  
+    height:auto;  
     margin: 0;
     padding: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: "Oswald", serif;
-  }
+    justify-content: space-between; 
 
 section{
- height: 100% ; 
+flex: 1;
+ height: auto; 
+ min-height: 100vh;
  background-image: url('/img/newimg.webp'); 
  background-size: cover; /* hace que la imagen ocupe todo*/ 
- background-position: center; /* Centra */
- background-repeat: no-repeat; /* evita que repita */
- /* filter: blur(5px); desenfoque  */
+ background-position: center; 
+ background-repeat: no-repeat; 
+ background-attachment: scroll; 
  font-family: "Oswald", serif;
 }
 
-header {
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: "Oswald", serif;
-  }
 
 .container1 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* corrige grid */
-    gap: 80px; /* Espacio entre  form */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 80px; 
     padding: 40px; 
     max-width: 90%; 
     margin-left: 10%;
     font-size: 18px;
+    padding: 20px;
 }
 
 form {
     padding: 20px;
-    width: 20%;
-    min-width: 550px; 
+    width: 100%;
+    max-width: 550px;
+    border-radius: 10px;
+    
+
 }
 
 legend{
@@ -67,6 +65,9 @@ input{
     border: 1px solid #ccc; /* más suave */
     border-radius: 5px; 
 }
+input:hover {
+    background: #d1c5c5;
+}
 
 button{
     border: 0.5px solid #ccc; /* más suave */
@@ -74,12 +75,43 @@ button{
     background: transparent;
 }
 
+button:hover {
+    background: #d1c5c5;
+}
 
 h1{
-    font-size: 100px;
+    font-size: 5vw;
     margin-top: 20px;
     margin-bottom: 10px;
     color:#d3b7b7;
     text-align: center;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* sombra  */
 }
+
+
+
+/* 768px (tablets y móviles) */
+@media (max-width: 768px) {
+    .container1 {
+        padding: 10px;
+        grid-template-columns: 1fr; 
+    }
+    form {
+        width: 90%; /* Que ocupe casi todo el ancho en pantallas chicas */
+    }
+
+    h1 {
+        font-size: 7vw; /* Más grande en móviles */
+    }
+}
+
+/* 480px (móviles pequeños) */
+@media (max-width: 480px) {
+    form {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 8vw;
+    }
+} }

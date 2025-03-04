@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Empresa de Gatos</title>
-  <link rel="stylesheet" type="text/css" href="style.php">
   <link rel="stylesheet" type="text/css" href="../css/index.css">
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,14 +26,29 @@
           <?php
 
 $menu = array();
+if (isset($_SESSION['id_usuario']) and $_SESSION['fk_tipo_usuario'] == 1 ) {
+  
+  $menu['Inicio'] = '../user/index.php';
+  $menu['Sobre nosotros'] = '../user/sobrenosotros.php';
+  $menu['Productos'] = '../user/productos.php';
+  $menu['Servicios'] = '../user/servicios.php';
+  $menu['Contacto'] = '../user/contacto.php';
+  $menu['ADM'] = '/../admin/indexAdmin.php';
+  $menu['Salir']= '../user/logout.php';
+
+}else{
+  $menu['Inicio'] = '/../user/index.php';
+  $menu['Sobre nosotros'] = '/../user/sobrenosotros.php';
+  $menu['Productos'] = '/../user/productos.php';
+  $menu['Servicios'] = '/../user/servicios.php';
+  $menu['Contacto'] = '/../user/contacto.php';
+  $menu['Salir']= '/../user/logout.php';
+}
+
 //$nombres            $links
-$menu['Inicio'] = '../user/index.php';
-$menu['Sobre nosotros'] = '../user/sobrenosotros.php';
-$menu['Productos'] = '../user/productos.php';
-$menu['Servicios'] = '../user/servicios.php';
-$menu['Contacto'] = '../user/contacto.php';
-//$menu['Administrador'] = '/../admin/indexAdmin.php';
-$menu['Salir']= '../user/logout.php';
+
+
+
 
 print "<ol class='navbar-nav me-auto mb-2 mb-lg-0'>";
 foreach($menu as $nombres=>$links){

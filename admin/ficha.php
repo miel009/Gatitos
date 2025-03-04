@@ -1,6 +1,6 @@
 <?php
 include_once("../componnents/security/admin.php");
-include_once("../complementos/header.php");
+
 
 ?>
 
@@ -23,14 +23,15 @@ include_once("../complementos/header.php");
 
 </html>
 
-
+<section class="hero">
 <?php
 
 require_once("../componnents/config.php");
 
 
+
 if ($con) {
-    print "<h1> Productos - FICHA (aca llega las caractersticas finales del producto. </h1>";
+    print "<h2> Productos </h2>";
     $id = null;
     if (isset($_GET['producto'])) {
         $id = $_GET['producto'];
@@ -49,8 +50,8 @@ if ($con) {
 
     while ($filas = mysqli_fetch_array($resultado)) {
 
-        print "<h2>$filas[nombreProducto]</h2>";
-        print "<img style='max-width: 20%;' alt=$filas[nombreProducto]  src=../../img/$filas[imagenProducto] >"; // aca llega la imagen del producto
+        print "<h3>$filas[nombreProducto]</h3>";
+        print "<img alt=$filas[nombreProducto]  src=../../img/$filas[imagenProducto] >"; // aca llega la imagen del producto
         print "<p>Precio: $filas[precioProducto]</p> ";
         print "<p>Categoria: $filas[categoriaProducto] </p>";
 
@@ -65,7 +66,10 @@ if ($con) {
 
 ?>
 
-
+<a class="volver" href="indexAdmin.php">
+    <button>Volver</button>
+</a>
+</section>
 
 <?php
 include_once("../complementos/footer.php");

@@ -12,17 +12,16 @@ if(!isset($_SESSION['id_usuario'] )){
 }
 
 ?>
-  <section class="hero">
+  <section class="heroindex">
     <div class="container">
       <h2>Bienvenido a nuestra empresa de gatos</h2>
       <p>Encuentra los gatos más adorables y tiernos para adoptar.</p>
-      <a href="#" class="cta">Ver gatos disponibles </a>
     </div>
   </section>
 
   <section class="featured">
     <div class="container">
-      <h1>Nuestros gatos destacados</h1>
+      <h1> Gatitos en adopcion </h1>
       <div class="row">
         <div class="col-md-4">
           <div class="card">
@@ -50,7 +49,7 @@ if(!isset($_SESSION['id_usuario'] )){
       </div>
     </div>
   </section>
-
+ 
   <?php
 include_once("../complementos/footer.php");
 ?>

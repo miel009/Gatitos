@@ -10,17 +10,19 @@ include_once("../../complementos/header.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> </title>
-    <link rel="stylesheet" href="../../css/borrarProducto.css">
     <link rel="stylesheet" type="text/css" href="../../css/index.css">
 </head>
+
 <body>
     
-</body>
-</html>
 
+
+<section class="hero">
+<div class="cont-borrar">
 <?php
 
 require_once("../../componnents/config.php");
+
 
 if($con){
     if(isset($_GET['producto']) && is_numeric($_GET['producto'])){
@@ -34,13 +36,16 @@ if($con){
 
     if($resultado){
         print "<h1>El producto fue eliminado</h1>";
-        print "<a href=../indexAdmin.php >Volver</a>";      
-                 
+        print " <div>
+        <a class='codigoProd' href=../indexAdmin.php >Volver</a> </div>";                
     }
 }
 
 ?>
-
+</div>
+</section>
+</body>
+</html>
 <?php
 include_once("../../complementos/footer.php");
 ?>
